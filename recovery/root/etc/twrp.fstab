@@ -1,0 +1,8 @@
+/boot		        emmc	/dev/block/bootdevice/by-name/boot					flags=slotselect
+/system		ext4	/dev/block/bootdevice/by-name/system					flags=slotselect
+/system_image	emmc	/dev/block/bootdevice/by-name/system					flags=slotselect
+/vendor		        ext4	/dev/block/bootdevice/by-name/vendor					flags=slotselect;display="Vendor";backup=1;wipeingui
+/vendor_image	emmc	/dev/block/bootdevice/by-name/vendor					flags=slotselect
+/metadata	        ext4	/dev/block/bootdevice/by-name/metadata
+/data                      f2fs        /dev/block/bootdevice/by-name/userdata                                flags=fileencryption=ice;keydirectory=/metadata/vold/metadata_encryption
+/misc		        emmc    /dev/block/bootdevice/by-name/misc
