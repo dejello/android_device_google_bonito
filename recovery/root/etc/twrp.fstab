@@ -6,3 +6,6 @@
 /metadata	        ext4	/dev/block/bootdevice/by-name/metadata
 /data                      f2fs        /dev/block/bootdevice/by-name/userdata                                flags=fileencryption=ice;keydirectory=/metadata/vold/metadata_encryption
 /misc		        emmc    /dev/block/bootdevice/by-name/misc
+
+# USB OTG
+/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.*.auto*     /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
